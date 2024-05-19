@@ -1,6 +1,7 @@
 use std::{fs, io, path::Path};
 
 use clap::{Parser, Subcommand};
+use rayon::iter::{ParallelBridge, ParallelIterator};
 use walkdir::WalkDir;
 
 #[derive(Subcommand, Debug)]
@@ -42,6 +43,7 @@ impl CopyAllFiles {
             .into_iter()
             .filter_map(|e| e.ok())
             .filter(|e| e.file_type().is_file())
+            .par_bridge()
             .for_each(|e| {
                 println!("Copying file: {:?}", e.path());
                 _ = fs::copy(e.path(), dst.join(e.file_name()));
