@@ -32,17 +32,19 @@ impl CopyAllFiles {
         }
 
         if !dst.exists() {
+            println!("Creating destination directory '{}'", self.dst);
             fs::create_dir_all(&dst)?;
         }
+
+        println!("Copying all files from '{}' to '{}'", self.src, self.dst);
 
         WalkDir::new(&src)
             .into_iter()
             .filter_map(|e| e.ok())
             .filter(|e| e.file_type().is_file())
             .for_each(|e| {
-                let src = e.path();
-                let dst = dst.join(src.strip_prefix(src).unwrap());
-                _ = fs::copy(src, dst);
+                println!("Copying file: {:?}", e.path());
+                _ = fs::copy(e.path(), dst.join(e.file_name()));
             });
 
         Ok(())
