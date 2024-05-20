@@ -9,7 +9,14 @@ pub async fn main() {
         Io::CopyAllFiles(copy_all_files) => {
             copy_all_files.execute().unwrap();
         }
+        Io::CopyAllFilesToExtFolder(copy_all_files_to_ext_folder) => {
+            copy_all_files_to_ext_folder.execute().unwrap();
+        }
+        Io::MoveAllFilesToExtFolder(move_all_files_to_ext_folder) => {
+            move_all_files_to_ext_folder.execute().unwrap();
+        }
     }
+    println!("Finished!");
     loop {
         tokio::time::sleep(tokio::time::Duration::from_secs(1)).await;
     }
