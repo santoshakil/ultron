@@ -3,6 +3,8 @@ name = "ultron"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+crate-type = ["cdylib", "staticlib", "rlib"]
 
 [dependencies]
 clap = { version = "4", features = ["derive"] }
