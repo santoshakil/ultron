@@ -1,9 +1,4 @@
-  ®️®️     ®️®️ ®️®️   ®️®️®️®️®️®️®️®️®️®️®️ ®️®️®️®️®️®️®️®️     ®️®️®️®️    ®️®️®️®️     ®️®️
-  ®️®️     ®️®️ ®️®️       ®️®️      ®️®️    ®️®️   ®️      ®️  ®️®️ ®️®️    ®️®️
-  ®️®️     ®️®️ ®️®️       ®️®️      ®️®️    ®️®️  ®️        ®️ ®️®️  ®️®️   ®️®️
-  ®️®️     ®️®️ ®️®️       ®️®️      ®️®️®️®️®️®️®️®️  ®️        ®️ ®️®️   ®️®️  ®️®️
-  ®️®️     ®️®️ ®️®️       ®️®️      ®️®️  ®️®️     ®️      ®️  ®️®️    ®️®️ ®️®️
-    ®️®️®️®️®️   ®️®️®️®️®️®️®️  ®️®️      ®️®️    ®️®️     ®️®️®️®️    ®️®️     ®️®️®️®️ 
+# Ultron
 
 Welcome to the File/Dir Management CLI Tool! This tool is designed to help you manage files and directories on your system with ease using simple and efficient commands. It is built using Rust for optimal performance and reliability.
 
